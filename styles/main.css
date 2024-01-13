@@ -13,6 +13,7 @@
 header {
     background: rgba(255, 144, 14, 0.10);
     padding: 2rem 9.3rem 0 9.3rem;
+    margin: 0 0 1rem 0;
 }
 
 .top-header {
@@ -72,7 +73,7 @@ li {
 }
 
 /* Button Area */
-#btn-one {
+.btn-one {
     padding: .8rem 1.2rem;
     color: #FFF;
     font-size: .9em;
@@ -98,47 +99,143 @@ li {
 /* Responsiveness For Mobile Or Smaller Dwvices */
 @media screen and (max-width:576px) {
     header {
+        background: rgba(150, 252, 17, 0.301);
         padding: 0;
         margin: 0;
     }
 
     .top-header {
+        padding-top: 1rem;
         display: flex;
         flex-direction: column;
         align-items: center;
     }
 
-    padding-top: 1.5rem;
-
     nav {
+        padding-top: 1.5rem;
     }
-
 }
 
 /* Responsiveness for Pad or medium devices */
+@media screen and (min-width:576px) and (max-width:992px) {
+    header {
+        background: rgba(14, 255, 235, 0.1);
+        padding: 0;
+        margin: 0;
+    }
+
+    .top-header {
+        padding-top: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav {
+        padding-top: 1.5rem;
+    }
+}
 
 /* End Header Area */
 
+
+
+/* Star Main Area */
+main {
+    /* padding: 20px 11rem; */
+    padding: 10px 0;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
 /* Start Feature One Section */
 .feature-one {
-    padding: 20px 11rem;
-    width: 100%;
-    margin: 0 auto;
     display: flex;
-    justify-content: center;
     align-items: center;
 }
 
 /* Feature One Images Section */
 .feature-one-images {
-    width: 50%;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
 }
 
-/* Feature One Image Section */
+/* Feature One Text Section */
 .feature-one-text {
-    width: 50%;
-    padding-left: 20px;
+    padding-left: 30px;
+}
 
+.gray-color-text {
+    color: #727272;
+    font-size: .8em;
+    font-weight: 500;
+}
+
+.strong-text {
+    font-size: .8em;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.colorful-text {
+    color: #FF900E;
+    font-size: .8em;
+    font-weight: 700;
+}
+
+#feature-one-description {
+    padding: 10px 0;
+    color: #727272;
+    font-size: .8em;
+    font-weight: 400;
+    line-height: 1rem;
+}
+
+@media screen and (max-width:576px) {
+    main {
+        max-width: 576px;
+    }
+    .feature-one {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .feature-one-images {
+        display: grid;
+        gap: 1.1rem;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .feature-one-text {
+        text-align: center;
+        padding: 20px 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media screen and (min-width:576px) and (max-width:992px) {
+    main {
+        max-width: 576px;
+    }
+    .feature-one {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .feature-one-images {
+        display: grid;
+        gap: 1.1rem;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .feature-one-text {
+        text-align: center;
+        padding: 20px 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }
